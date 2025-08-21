@@ -18,20 +18,22 @@ const server = fastify({
   },
 }).withTypeProvider<ZodTypeProvider>();
 
-server.register(fastifySwagger, {
-  openapi: {
-    info: {
-      title: 'Desafio Node.js',
-      version: '1.0.0',
-    }
-  },
-  transform: jsonSchemaTransform,
-})
+if (process.env.NODE_ENV === 'development') {
+  server.register(fastifySwagger, {
+    openapi: {
+      info: {
+        title: 'Desafio Node.js',
+        version: '1.0.0',
+      }
+    },
+    transform: jsonSchemaTransform,
+  })
 
-server.register(scalarAPIReference, {
-  routePrefix: '/docs',
-})
+  server.register(scalarAPIReference, {
+    routePrefix: '/docs',
+  })
 
+}
 
 
 server.setValidatorCompiler(validatorCompiler);
