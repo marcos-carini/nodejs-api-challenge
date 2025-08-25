@@ -15,6 +15,27 @@
       "when": 1755666402077,
       "tag": "0001_fresh_randall",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1755911573567,
+      "tag": "0002_left_sebastian_shaw",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1755911903466,
+      "tag": "0003_overjoyed_electro",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1755916763157,
+      "tag": "0004_ambiguous_cannonball",
+      "breakpoints": true
     }
   ]
 }
