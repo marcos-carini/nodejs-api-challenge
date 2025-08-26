@@ -1,22 +1,28 @@
 import { expect, test } from 'vitest'
+import { randomUUID } from 'node:crypto'
 import request from 'supertest'
 import { server } from '../app.ts'
 import { makeCourse } from '../tests/factories/make-course.ts'
 
-test('get a course by id', async () => {
+test('get courses', async () => {
   await server.ready()
 
-  const course = await makeCourse();
+  const titleId = randomUUID()
+
+  const course = await makeCourse(titleId);
 
   const response = request(server.server)
-  .get(`/courses/${course.id}`)
+  .get(`/courses?search=${titleId}`)
 
   expect((await response).status).toEqual(200)
   expect((await response).body).toEqual({
-    course: {
-      id: expect.any(String),
-      title: expect.any(String),
-      description: null,
-    }
+    total: 1,
+    courses: [
+      {
+        id: expect.any(String),
+        title: titleId,
+        enrollments: 0,
+      }
+    ]
   })
 })
