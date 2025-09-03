@@ -43,6 +43,34 @@
       "when": 1756161970422,
       "tag": "0005_conscious_abomination",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1756857366130,
+      "tag": "0006_bright_chimera",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1756857406797,
+      "tag": "0007_cynical_crusher_hogan",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1756857460223,
+      "tag": "0008_married_bushwacker",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1756857704762,
+      "tag": "0009_worried_nocturne",
+      "breakpoints": true
     }
   ]
 }
