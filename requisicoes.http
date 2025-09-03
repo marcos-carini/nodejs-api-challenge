@@ -12,3 +12,13 @@ GET http://localhost:3333/courses?orderBy=title
 ### 
 
 GET http://localhost:3333/courses/245c1444-2bc1-49a9-9e33-ad3467e99661
+
+###
+
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+  "email": "Esther.Albuquerque@bol.com.br",
+  "password": "123456"
+}
