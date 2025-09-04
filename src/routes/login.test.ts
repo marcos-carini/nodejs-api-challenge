@@ -19,6 +19,6 @@ test('login', async () => {
 
   expect((await response).status).toEqual(200)
   expect((await response).body).toEqual({
-    message: 'Login realizado com sucesso!',
+    token: expect.any(String),
   })
 })
