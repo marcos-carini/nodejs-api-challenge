@@ -1,12 +1,13 @@
 import type { FastifyRequest, FastifyReply} from 'fastify'
-import jwt from 'jsonwebtoken'; 
 import { getAuthenticatedUserFromRequest } from '../../utils/get-authenticated-user-from-request.ts';
 
 
-export async function checkUserRole(request: FastifyRequest, reply: FastifyReply) {
-  const user = getAuthenticatedUserFromRequest(request)
+export function checkUserRole(role: 'student' | 'manager') {
+  return async function (request: FastifyRequest, reply: FastifyReply) {
+    const user = getAuthenticatedUserFromRequest(request)
 
-  if (user.role !== 'manager') {
-    return reply.status(401).send();
+    if (user.role !== role) {
+      return reply.status(401).send();
+    }
   }
 }
