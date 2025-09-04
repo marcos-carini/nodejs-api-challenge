@@ -12,7 +12,7 @@ GET http://localhost:3333/courses?orderBy=title
 ### 
 
 GET http://localhost:3333/courses/245c1444-2bc1-49a9-9e33-ad3467e99661
-
+Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlZDE0NjY4Yy05N2ZlLTQ1YjctODUzYy0xY2JiMjg3OWEwYzciLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc1Njk0NjgzM30.C8Jl--TFfcpWlHGKuZb14TNveg1bUzvlobChnDrvXYA"
 ###
 
 POST http://localhost:3333/sessions
